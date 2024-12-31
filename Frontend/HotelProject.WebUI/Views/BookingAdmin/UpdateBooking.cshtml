@@ -1,0 +1,43 @@
+﻿@model HotelProject.WebUI.Dtos.BookingDto.UpdateBookingDto
+@{
+    ViewData["Title"] = "UpdateBooking";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<h1>Rezervasyon Güncelleme</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="BookingId" />
+    <label>Misafir Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <br />
+    <label>Misafir Mail</label>
+    <input type="email" asp-for="Mail" class="form-control" />
+    <br />
+    <label>Giriş Tarihi</label>
+    <input type="date" asp-for="CheckIn" required class="form-control" />
+    <br />
+     <label>Çıkış Tarihi</label>
+    <input type="date" asp-for="CheckOut" required class="form-control" />
+    <br />
+     <label>Yetişkin Sayısı</label>
+    <input type="text" asp-for="AdultCount" class="form-control" />
+    <br />
+     <label>Çocuk Sayısı</label>
+    <input type="text" asp-for="ChildCount" class="form-control" />
+    <br />
+     <label>Oda Sayısı</label>
+    <input type="text" asp-for="RoomCount" class="form-control" />
+    <br />
+     <label>Yetişkin Sayısı</label>
+    <input type="text" asp-for="AdultCount" class="form-control" />
+    <br />
+     <label>Özel İstekler</label>
+      <textarea  class="form-control" rows="5" asp-for="SpecialRequest"  />
+    <br />
+     <label>Açıklama</label>
+    <textarea  class="form-control" rows="5" asp-for="Description"  />
+    <br />
+    <button class="btn btn-outline-info">Rezervasyonu Güncelle</button>
+</form>
+
